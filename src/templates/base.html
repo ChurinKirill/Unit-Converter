@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit converter</title>
+    <link rel="stylesheet", href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+<body>
+    {% set dropdown %}
+        {% block dropdown_content %}{% endblock %}
+    {% endset %}
+    <div class="container">
+        <header>
+            <div class="header-nav">
+                <span class="brand">Unit converter</span>
+                <a class="nav-link" href="/length">Length</a>
+                <a class="nav-link" href="/weight">Weight</a>
+                <a class="nav-link" href="/temperature">Temperature</a>
+            </div>
+        </header>
+        <main role="main" class="main-content">
+            <div class="main-body">
+                <!-- ЛЕВАЯ ЧАСТЬ: форма -->
+                <section class="left-panel">
+                    <h2>Converting</h2>
+                    <form method="post" action="/convert" class="converter-form" id="converterFormLength">
+                    <!-- Поле ввода числа -->
+                    <div class="form-group">
+                        <label for="inputValue">Value</label>
+                        <input
+                            type="number"
+                            id="inputValue"
+                            placeholder="Input value"
+                            step="any"
+                            value=""
+                            name="userValue"
+                            required
+                        />
+                    </div>
+
+                    <!-- Два выпадающих списка -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fromUnit">From</label>
+                            <select id="fromUnit" name="fromUnit">
+                                {{dropdown}}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="toUnit">To</label>
+                            <select id="toUnit" name="toUnit">
+                                {{dropdown}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка Convert -->
+                    <button type="submit" class="btn-convert" id="convertBtn">⟳ Convert</button>
+                    <input type="hidden" id="unitType" name="unitType" value={{unit_type}}>
+                </form>
+                </section>
+
+                <!-- ПРАВАЯ ЧАСТЬ: результат -->
+                <section class="right-panel">
+                    <h2>Result</h2>
+                    <div class="result-box" id="resultBox">
+                        <div class="result-value" id="resultDisplay">
+                            {{result}}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
