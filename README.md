@@ -2,6 +2,8 @@
 
 ## Unit Converter (EN)
 
+Available by default on http://127.0.0.1:5000
+
 A web application for quickly and easily converting values ​​between different units of measurement. Supports conversion of length, mass, and temperature.
 
 ## Features
@@ -35,6 +37,8 @@ The console output will indicate the address the application is running on, for 
 `Running on http://1.1.1.1:5000`
 
 ## Конвертер единиц измерения (RU)
+
+Доступен по умолчанию на http://127.0.0.1:5000
 
 Веб-приложение для быстрого и удобного перевода значений между различными единицами измерения. Поддерживает конвертацию длины, массы, температуры.
 
