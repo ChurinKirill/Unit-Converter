@@ -23,12 +23,17 @@ A web application for quickly and easily converting values ​​between differe
 
 The application requires [Python](https://www.python.org/downloads/)
 
-1. Install dependencies:
+1. Cloning repository:
+```bash
+git clone https://github.com/ChurinKirill/Unit-Converter.git
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the application:
+3. Run the application:
 ```bash
 python app.py
 ```
@@ -59,12 +64,17 @@ The console output will indicate the address the application is running on, for 
 
 Для работы приложения необходим [Python](https://www.python.org/downloads/)
 
-1. Установка зависимостей:
+1. Клонирование репозитория:
+```bash
+git clone https://github.com/ChurinKirill/Unit-Converter.git
+```
+
+2. Установка зависимостей:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Запуск приложения:
+3. Запуск приложения:
 ```bash
 python app.py
 ```
